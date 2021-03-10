@@ -5,7 +5,7 @@ import BlogTitle from '../BlogTitle';
 import CustomLink from '../Link';
 
 const editUrl = (slug) =>
-  `https://github.com/ekomenyong/ekomenyong.com/edit/master/src/data/posts/${slug}.mdx`;
+  `https://github.com/ekomenyong/ekomenyong.com/edit/main/src/data/posts/${slug}.mdx`;
 const discussUrl = (slug) =>
   `https://mobile.twitter.com/search?q=${encodeURIComponent(
     `https://ekomenyong.com/posts/${slug}`
