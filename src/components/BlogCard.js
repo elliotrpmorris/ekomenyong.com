@@ -1,0 +1,42 @@
+import { CgArrowLongRight } from 'react-icons/cg';
+import dayjs from 'dayjs';
+import CustomLink from './Link';
+
+export default function BlogCard({ title, summary, slug, date, readingTime }) {
+  return (
+    <>
+      <div className="flex flex-col md:flex-row items-start md:items-baseline justify-start mb-12 max-w-4xl mx-auto px-0 md:px-4">
+        <div className="md:w-1/3 mb-4 md:mb-0">
+          <p className="text-gray-500 dark:text-gray-300">{dayjs(date).format('MMM D, YYYY')}</p>
+        </div>
+        <div className="md:w-full">
+          <div>
+            <CustomLink href={`/posts/${slug}`}>
+              <a className="hover:no-underline">
+                <h3 className="text-gray-800 dark:text-gray-50 font-semibold text-2xl leading-tight mb-0.5">
+                  {title}
+                </h3>
+              </a>
+            </CustomLink>
+            {/* <div className="space-x-4 mb-6">
+              {[{ tag: 'SEO' }, { tag: 'Design' }, { tag: 'Dev' }].map((tags) => (
+                <CustomLink href="#" key={tags.tag}>
+                  <a className="uppercase text-sm font-semibold link-underline">{tags.tag}</a>
+                </CustomLink>
+              ))}
+            </div> */}
+          </div>
+          <div className="mb-6">
+            <p className="text-gray-600 dark:text-gray-300 text-lg leading-snug">{summary}</p>
+          </div>
+          <CustomLink href={`/posts/${slug}`}>
+            <a className="inline-flex items-center link-underline">
+              Read more
+              <CgArrowLongRight className="ml-2 text-xl" />
+            </a>
+          </CustomLink>
+        </div>
+      </div>
+    </>
+  );
+}
