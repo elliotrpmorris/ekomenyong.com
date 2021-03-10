@@ -53,7 +53,7 @@ export default function BlogLayout({ children, frontMatter }) {
         <div className="flex flex-col md:flex-row items-center justify-between pb-4">
           <p className=" prose prose-indigo text-gray-700 dark:text-gray-200">
             Written by:{' '}
-            <CustomLink href="about">
+            <CustomLink href="/about">
               <a className="text-gray-700">Ekom Enyong</a>
             </CustomLink>
           </p>
