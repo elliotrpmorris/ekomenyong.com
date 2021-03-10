@@ -51,7 +51,7 @@ export default function BlogLayout({ children, frontMatter }) {
       <article className="max-w-3xl mx-auto px-0 md:px-4 my-24">
         <BlogTitle>{frontMatter.title}</BlogTitle>
         <div className="flex flex-col md:flex-row items-center justify-between pb-4">
-          <p className=" prose prose-indigo text-gray-700 dark:text-gray-200">
+          <p className=" prose prose-indigo dark:prose-dark text-gray-700 dark:text-gray-200">
             Written by:{' '}
             <CustomLink href="/about">
               <a className="text-gray-700">Ekom Enyong</a>
