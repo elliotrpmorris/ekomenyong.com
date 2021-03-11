@@ -18,12 +18,6 @@ const PostSeo = ({ frontMatter }) => {
               height: 720,
               alt: 'Cover Image for Understanding Core Web Vitals Web Post',
             },
-            {
-              url: 'https://ekomenyong.com/img/ekom-enyong-header.jpg',
-              width: 1200,
-              height: 627,
-              alt: 'EkomEnyong.com Cover - SEO Professional and Digital Creative',
-            },
           ],
         }}
         twitter={{
