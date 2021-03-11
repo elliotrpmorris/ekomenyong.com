@@ -1,8 +1,9 @@
 import dayjs from 'dayjs';
 import { NextSeo, ArticleJsonLd } from 'next-seo';
-import AppContainer from '../AppContainer';
-import BlogTitle from '../BlogTitle';
-import CustomLink from '../Link';
+import AppContainer from '@/components/AppContainer';
+import BlogTitle from '@/components/BlogTitle';
+import CustomLink from '@/components/Link';
+import PostSeo from 'src/components/PostSeo';
 
 const editUrl = (slug) =>
   `https://github.com/ekomenyong/ekomenyong.com/edit/main/src/data/posts/${slug}.mdx`;
@@ -11,43 +12,10 @@ const discussUrl = (slug) =>
     `https://ekomenyong.com/posts/${slug}`
   )}`;
 
-export default function BlogLayout({ children, frontMatter }) {
+export default function PostLayout({ children, frontMatter }) {
   return (
     <AppContainer>
-      <NextSeo
-        title={frontMatter.title}
-        description={frontMatter.summary}
-        canonical={`https://ekomenyong.com/posts/${frontMatter.slug}`}
-        openGraph={{
-          url: `https://ekomenyong.com/posts/${frontMatter.slug}`,
-          title: `${frontMatter.title}`,
-          description: `${frontMatter.summary}`,
-          images: [
-            {
-              url: `https://ekomenyong.com${frontMatter.image}`,
-              width: 1200,
-              height: 720,
-              alt: 'Cover Image for Understanding Core Web Vitals Web Post',
-            },
-          ],
-        }}
-        twitter={{
-          handle: '@EkomEnyong',
-          site: '@EkomEnyong',
-          cardType: 'summary_large_image',
-        }}
-      />
-      <ArticleJsonLd
-        url={`https://ekomenyong.com/posts/${frontMatter.slug}`}
-        title={frontMatter.title}
-        images={[`https://ekomenyong.com${frontMatter.image}`]}
-        datePublished={`${frontMatter.publishedAt}`}
-        dateModified={`${frontMatter.lastmod}`}
-        authorName="Ekom Enyong"
-        publisherName="EkomEnyong.com"
-        publisherLogo="https://ekomenyong.com/img/ekom-enyong-header.jpg"
-        description={frontMatter.summary}
-      />
+      <PostSeo frontMatter={frontMatter} />
       <article className="max-w-3xl mx-auto px-0 md:px-4 my-24">
         <BlogTitle>{frontMatter.title}</BlogTitle>
         <div className="flex flex-col md:flex-row items-center justify-between pb-4">

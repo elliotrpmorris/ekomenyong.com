@@ -1,9 +1,12 @@
-import '@/styles/tailwind.css';
 import Head from 'next/head';
-import { DefaultSeo } from 'next-seo';
+
 import { MDXProvider } from '@mdx-js/react';
 import { ThemeProvider } from '@/theme/ThemeContext';
-import SEO from '../../next-seo.config';
+
+import { DefaultSeo } from 'next-seo';
+import SEO from '@/utils/next-seo.config';
+import '@/styles/tailwind.css';
+
 export function reportWebVitals(metric) {
   console.log(metric);
 }

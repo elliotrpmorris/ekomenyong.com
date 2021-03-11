@@ -6,6 +6,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        // See https://tailwindcss.com/docs/customizing-colors#color-palette-reference for Tailwind colors
         gray: colors.trueGray,
         rose: colors.rose,
         violet: colors.violet,
@@ -20,7 +21,7 @@ module.exports = {
             a: {
               color: theme('colors.gray.600'),
               '&:hover': {
-                color: theme('colors.gray.800'),
+                color: theme('colors.indigo.500'),
               },
               code: { color: theme('colors.blue.400') },
             },
@@ -36,13 +37,23 @@ module.exports = {
             },
             h3: {
               fontWeight: '600',
-              color: theme('colors.gray.900'),
+              color: theme('colors.gray.600'),
             },
             'h1,h2,h3,h4': {
               'scroll-margin-top': spacing[32],
             },
             'h4,h5,h6': {
               color: theme('colors.gray.900'),
+            },
+            ol: {
+              li: {
+                '&:before': { color: theme('colors.indigo.500') },
+              },
+            },
+            ul: {
+              li: {
+                '&:before': { backgroundColor: theme('colors.indigo.500') },
+              },
             },
             code: { color: theme('colors.rose.500') },
             'blockquote p:first-of-type::before': false,

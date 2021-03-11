@@ -15,7 +15,8 @@ export default function AboutHeading({ imgSrc }) {
           I've been helping SMBs, large, and global companies clients get to the top of Google.
         </p>
         <p>
-          I am on a self-taught developer journey <Emoji emoji="👩🏾‍💻" />. I enjoy working remotely
+          I am on a self-taught developer journey{' '}
+          <Emoji emoji="👩🏾‍💻" label="Girl working behind a laptop screen" />. I enjoy working remotely
           based out of Charlotte.
         </p>
       </div>

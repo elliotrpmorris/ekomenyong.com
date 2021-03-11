@@ -9,6 +9,18 @@ module.exports = {
         source: '/blog/core-web-vitals-understanding-lcp-fid-and-cls/',
         destination: '/posts/core-web-vitals-understanding-lcp-fid-and-cls/',
       },
+      {
+        source: '/blog/maximizing-conversions-from-low-traffic-landing-pages/',
+        destination: '/posts/',
+      },
+      {
+        source: '/blog/signs-of-an-unethical-seo-agency-or-freelancer/',
+        destination: '/posts/',
+      },
+      {
+        source: '/blog/how-important-is-technical-seo/',
+        destination: '/posts/',
+      },
     ];
   },
   webpack: (config, { dev, isServer }) => {

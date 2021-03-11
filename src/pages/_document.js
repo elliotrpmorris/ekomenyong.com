@@ -51,21 +51,18 @@ class MyDocument extends Document {
             crossOrigin="anonymous"
           />
           <link
-            rel="preload"
             href="/fonts/MessinaSans-SemiboldItalic.woff2"
             as="font"
             type="font/woff2"
             crossOrigin="anonymous"
           />
           <link
-            rel="preload"
             href="/fonts/MessinaSans-BoldItalic.woff2"
             as="font"
             type="font/woff2"
             crossOrigin="anonymous"
           />
           <link
-            rel="preload"
             href="/fonts/MessinaSans-BlackItalic.woff2"
             as="font"
             type="font/woff2"

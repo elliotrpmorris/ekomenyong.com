@@ -1,0 +1,50 @@
+import { NextSeo, ArticleJsonLd } from 'next-seo';
+
+const PostSeo = ({ frontMatter }) => {
+  return (
+    <>
+      <NextSeo
+        title={frontMatter.title}
+        description={frontMatter.summary}
+        canonical={`https://ekomenyong.com/posts/${frontMatter.slug}`}
+        openGraph={{
+          url: `https://ekomenyong.com/posts/${frontMatter.slug}`,
+          title: `${frontMatter.title}`,
+          description: `${frontMatter.summary}`,
+          images: [
+            {
+              url: `https://ekomenyong.com${frontMatter.image}`,
+              width: 1200,
+              height: 720,
+              alt: 'Cover Image for Understanding Core Web Vitals Web Post',
+            },
+            {
+              url: 'https://ekomenyong.com/img/ekom-enyong-header.jpg',
+              width: 1200,
+              height: 627,
+              alt: 'EkomEnyong.com Cover - SEO Professional and Digital Creative',
+            },
+          ],
+        }}
+        twitter={{
+          handle: '@EkomEnyong',
+          site: '@EkomEnyong',
+          cardType: 'summary_large_image',
+        }}
+      />
+      <ArticleJsonLd
+        url={`https://ekomenyong.com/posts/${frontMatter.slug}`}
+        title={frontMatter.title}
+        images={[`https://ekomenyong.com${frontMatter.image}`]}
+        datePublished={`${frontMatter.publishedAt}`}
+        dateModified={`${frontMatter.lastmod}`}
+        authorName="Ekom Enyong"
+        publisherName="EkomEnyong.com"
+        publisherLogo="https://ekomenyong.com/img/ekom-enyong-header.jpg"
+        description={frontMatter.summary}
+      />
+    </>
+  );
+};
+
+export default PostSeo;

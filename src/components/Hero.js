@@ -7,7 +7,7 @@ export default function Header({ title, subTitle }) {
         <h1 className="text-4xl md:text-5xl font-bold leading-tight tracking-tight mb-4">
           {title}
         </h1>
-        <p className="text-xl text-gray-600 dark:text-gray-200 max-w-2xl">{subTitle}</p>
+        <p className="text-xl text-gray-600 dark:text-gray-200 max-w-xl">{subTitle}</p>
       </div>
     </div>
   );

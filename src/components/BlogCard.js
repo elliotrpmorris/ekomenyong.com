@@ -9,19 +9,21 @@ export default function BlogCard({ title, summary, slug, date, readingTime }) {
         <div className="md:w-1/3 mb-4 md:mb-0">
           <p className="text-gray-500 dark:text-gray-300">{dayjs(date).format('MMM D, YYYY')}</p>
         </div>
-        <div className="md:w-full">
+        <div className="md:w-full ">
           <div>
             <CustomLink href={`/posts/${slug}`}>
               <a className="hover:no-underline">
-                <h3 className="text-gray-800 dark:text-gray-50 font-semibold text-2xl leading-tight mb-0.5">
+                <h3 className="text-gray-800 dark:text-gray-50 font-semibold text-2xl leading-tight">
                   {title}
                 </h3>
               </a>
             </CustomLink>
-            {/* <div className="space-x-4 mb-6">
+            {/* <div className="space-x-4 mb-4">
               {[{ tag: 'SEO' }, { tag: 'Design' }, { tag: 'Dev' }].map((tags) => (
                 <CustomLink href="#" key={tags.tag}>
-                  <a className="uppercase text-sm font-semibold link-underline">{tags.tag}</a>
+                  <a className="uppercase text-sm font-semibold link-underline text-indigo-500 dark:text-gray-200 hover:text-indigo-500 dark:hover:text-gray-200">
+                    {tags.tag}
+                  </a>
                 </CustomLink>
               ))}
             </div> */}
@@ -30,7 +32,7 @@ export default function BlogCard({ title, summary, slug, date, readingTime }) {
             <p className="text-gray-600 dark:text-gray-300 text-lg leading-snug">{summary}</p>
           </div>
           <CustomLink href={`/posts/${slug}`}>
-            <a className="inline-flex items-center link-underline">
+            <a className="inline-flex items-center link-underline text-lg">
               Read more
               <CgArrowLongRight className="ml-2 text-xl" />
             </a>

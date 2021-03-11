@@ -96,6 +96,7 @@
   }
 
   .link-underline {
+    @apply text-gray-800 dark:text-gray-200 hover:text-indigo-500 dark:hover:text-gray-200;
     position: relative;
     padding-bottom: 2px;
   }
@@ -106,7 +107,7 @@
     left: 0;
     right: 0;
     height: 2px;
-    @apply bg-gray-800 dark:bg-gray-200;
+    @apply bg-indigo-500 dark:bg-gray-200;
     transform-origin: bottom right;
     transform: scaleX(0);
     transition: transform 0.5s ease;

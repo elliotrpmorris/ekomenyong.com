@@ -8,6 +8,9 @@
       "@/theme/*": [
         "src/theme/*"
       ],
+      "@/layouts/*": [
+        "/src/layouts/*"
+      ],
       "@/lib/*": [
         "/src/lib/*"
       ],

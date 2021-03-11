@@ -10,7 +10,10 @@ export default function BlogIndex({ posts }) {
   const [searchValue, setSearchValue] = useState('');
   const filteredBlogPosts = posts
     .sort((a, b) => Number(new Date(b.publishedAt)) - Number(new Date(a.publishedAt)))
-    .filter((frontMatter) => frontMatter.title.toLowerCase().includes(searchValue.toLowerCase()));
+    .filter((frontMatter) => {
+      const concat = frontMatter.title + frontMatter.summary + frontMatter.tags;
+      return concat.toLowerCase().includes(searchValue.toLowerCase());
+    });
   return (
     <AppContainer>
       <NextSeo
@@ -63,7 +66,7 @@ export default function BlogIndex({ posts }) {
             type="text"
             onChange={(e) => setSearchValue(e.target.value)}
             placeholder="Search posts"
-            className="px-4 py-2 border border-gray-300 dark:border-gray-900 focus:ring-gray-500 focus:border-gray-500 block w-full rounded-md bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200"
+            className="px-4 py-2 border border-gray-300 dark:border-gray-900 focus:ring-indigo-500 focus:border-gray-500 block w-full rounded-md bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200"
           />
           <svg
             className="absolute right-3 top-3 h-5 w-5 text-gray-500 dark:text-gray-300"

@@ -1,7 +1,7 @@
 ---
-title: 'Core Web Vitals: Understanding LCP, FID, and CLS'
+title: 'Learn Core Web Vitals: LCP, FID, and CLS'
 publishedAt: '2020-08-10'
-lastmod: '2021-03-09'
+lastmod: '2021-03-11'
 tags: ['seo', 'core web vitals']
 summary: "Understanding Google's Core Web Metrics, how to track them, and what it means for your search rankings."
 image: '/img/cwv-hero.jpeg'
@@ -18,16 +18,13 @@ draft: false
 
 Core Web Vitals are coming soon to a Google search ranking near you. 
 As much as SEOs love to throw around new buzzwords, I think it’s important to know what this means.
-Earlier this year,
-<CustomLink href="https://webmasters.googleblog.com/2020/05/evaluating-page-experience.html">
-<a>Google announced</a>
-</CustomLink> that there will be a search engine ranking change that will include these new metrics.
+Earlier this year, [Google announced](https://webmasters.googleblog.com/2020/05/evaluating-page-experience.html) that there will be a search engine ranking change that will include these new metrics.
 
 It is very telling that Google is informing us when Core Web Vitals are going to be a search ranking factor.
 Typically, Google keeps their search engine algorithm secret recipe to themselves, so I would expect this update will impact websites across the web significantly.
 
 ## What Are Core Web Vitals?
-<CustomLink href="https://web.dev/vitals/"><a>Web Vitals</a></CustomLink> is an initiative by Google to help provide essential metrics for a healthy website. 
+[Web Vitals](https://web.dev/vitals/) is an initiative by Google to help provide essential metrics for a healthy website. 
 Core Web Vitals are a subset of those Web Vitals representing a distinct and measurable part of the user experience.
 
 Core Web Vitals will evolve with the web over time, but for now, Google has given webmasters and SEOs 3 metrics to focus on in preparation of May 2021:
@@ -38,7 +35,7 @@ Core Web Vitals will evolve with the web over time, but for now, Google has give
 
 ### Largest Contentful Paint (LCP): Measuring Load Performance
 
-<CustomLink href="https://web.dev/lcp/"><a>Largest Contentful Paint (LCP)</a></CustomLink> is the point during page load when the page’s main content has likely loaded. This is recorded once the web page has rendered the largest image or text block visible in the viewport.
+[Largest Contentful Paint (LCP)](https://web.dev/lcp/) is the point during page load when the page’s main content has likely loaded. This is recorded once the web page has rendered the largest image or text block visible in the viewport.
 
 The basic meaning here is that when the main content of your page loads on the screen, whether that content is an image or text, your LCP is then recorded. Please understand that Google does not count content that does not add to the value of a users’ experience So Google isn’t recording things like loading indicators or those annoying full-screen splash pages (looking at you Neil Patel).
 
@@ -48,7 +45,7 @@ What is a good LCP score? Google says an LCP indicating a positive page load exp
 
 ### First Input Delay (FID): Measuring Page Interactivity
 
-<CustomLink href="https://web.dev/fid/"><a>First Input Delay (FID)</a></CustomLink> is the amount of time measured from when a user first interacts with your page to the time the browser can begin to process those interactions. You’ve probably experienced this when a webpage has loaded on your phone or tablet, and you try to scroll, but the website response is delayed. That delay is your FID.
+[First Input Delay (FID)](https://web.dev/fid/) is the amount of time measured from when a user first interacts with your page to the time the browser can begin to process those interactions. You’ve probably experienced this when a webpage has loaded on your phone or tablet, and you try to scroll, but the website response is delayed. That delay is your FID.
 
 The goal is to have a low FID so that users know that your page is usable. No one wants to sit around waiting for a page to let you interact with it when there are tons of pieces of content on the web waiting to be discovered.
 
@@ -62,7 +59,7 @@ Sometimes it’s not a big deal; you can just hit back. But what if you were on 
 
 Depending on how much money you’ve just spent, that could be a truly terrible day.
 
-Google is measuring this! <CustomLink href="https://web.dev/cld/"><a>Cumulative Layout Shift (CLS)</a></CustomLink> is a page experience metric that measures how often users experience these layout shifts. According to Google, “to provide a good user experience, pages should maintain a CLS of less than 0.1”.
+Google is measuring this! [Cumulative Layout Shift (CLS)](https://web.dev/cld/) is a page experience metric that measures how often users experience these layout shifts. According to Google, “to provide a good user experience, pages should maintain a CLS of less than 0.1”.
 
 ## Why Do Core Web Vitals Matter?
 
@@ -83,13 +80,13 @@ There are plenty of Google tools that make it very simple to find out the web vi
 ### PageSpeed Insights + Lighthouse
 
 These are Google products and as you guessed it, they record Core Web Vital metrics. 
-You can simply enter your URL in the <CustomLink href="https://developers.google.com/speed/pagespeed/insights/"><a>PageSpeed Insights</a></CustomLink> input or use the Lighthouse report in the Chrome Browser developer tools. 
+You can simply enter your URL in the [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/) input or use the Lighthouse report in the Chrome Browser developer tools. 
 Be aware that the extensions you use on your browser can affect your scores, so I suggest doing browser-based tests in an incognito window or a profile that does not have browser extensions.
 
 ### Google Chrome and Brave Browser Web Vitals Extension
 
-Use the <CustomLink href="https://chrome.google.com/webstore/detail/web-vitals/ahfhijdlegdabablpippeagghigmibma"><a>Web Vitals browser extension</a></CustomLink> on Chrome (or Brave) to be able to provide you with instant metrics of a web page. 
-I’ve been using it in Brave and it works on any other Chromium-based browser.
+Use the [Web Vitals browser extension](https://chrome.google.com/webstore/detail/web-vitals/ahfhijdlegdabablpippeagghigmibma) on Chrome (or Brave) to be able to provide you with instant metrics of a web page. 
+I’ve been using it in Brave to measure performance on [my Next.js website](/posts/rebuilding-blog-nextjs-mdx-tailwindcss/) and it works on any other Chromium-based browser.
 
 <Image
   alt="Cover Image for Understanding Core Web Metrics"
@@ -109,9 +106,9 @@ If you check that report, you will find which pages on your site pass the Core W
 
 ### Tracking Core Web Vitals in Next.js
 
-If your client is working on a <CustomLink href="https://nextjs.org/"><a>Next.js application</a></CustomLink> running version 9.4 and up, they automatically collect that information for you. 
+If your client is working on a [Next.js application](https://nextjs.org/) running version 9.4 and up, they automatically collect that information for you. 
 You can create a custom App component and define a reportWebVitals function. You track more than just Web Vitals.
-Check out their docs on <CustomLink href="https://nextjs.org/docs/advanced-features/measuring-performance"><a>how to measure performance in Next.js</a></CustomLink> for more information.
+Check out their docs on [how to measure performance in Next.js](https://nextjs.org/docs/advanced-features/measuring-performance) for more information.
 
 ```js:pages/_app.js
   export function reportWebVitals(metric) {
