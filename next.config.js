@@ -3,11 +3,12 @@ module.exports = {
   images: {
     domains: ['res.cloudinary.com'],
   },
-  async rewrites() {
+  async redirects() {
     return [
       {
         source: '/blog/core-web-vitals-understanding-lcp-fid-and-cls/',
         destination: '/posts/core-web-vitals-understanding-lcp-fid-and-cls/',
+        permanent: true,
       },
       {
         source: '/blog/maximizing-conversions-from-low-traffic-landing-pages/',
