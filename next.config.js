@@ -25,6 +25,11 @@ module.exports = {
         destination: '/posts',
         permanent: true,
       },
+      {
+        source: '/img/cover-how-to-setup-free-postgresql-db.jpg',
+        destination: '/img/cover-how-to-setup-free-postgresql-db-on-railway.jpg',
+        permanent: true,
+      },
     ];
   },
   webpack: (config, { dev, isServer }) => {
