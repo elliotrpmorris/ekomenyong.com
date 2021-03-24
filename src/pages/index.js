@@ -6,7 +6,7 @@ import BlogCard from '@/components/BlogCard';
 import Hero from '@/components/Hero';
 import SectionDivider from '@/components/SectionDivider';
 import CustomLink from '@/components/Link';
-const MAX_DISPLAY = 5;
+const MAX_DISPLAY = 3;
 
 export default function Home({ posts }) {
   const filteredBlogPosts = posts.sort(
