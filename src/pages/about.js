@@ -21,6 +21,12 @@ export default function AboutPage({ posts }) {
         </h1>
         <AboutHeading imgSrc="/img/ekom-enyong-headshot.jpg" />
         <SectionDivider />
+        <h2 className="font-bold text-2xl md:text-4xl tracking-tight mt-4 mb-2">Latest Posts</h2>
+        <p className="text-xl text-gray-600 dark:text-gray-200 max-w-2xl mb-10">
+          The Micro-Musings Mainframe: exploring the wandering mind of a marketing professional and
+          digital creative.
+        </p>
+
         {posts.slice(0, MAX_DISPLAY).map((frontMatter) => (
           <BlogCard key={frontMatter.title} date={frontMatter.publishedAt} {...frontMatter} />
         ))}
