@@ -1,5 +1,5 @@
 module.exports = {
-  trailingSlash: true,
+  trailingSlash: false,
   images: {
     domains: ['res.cloudinary.com'],
   },
@@ -7,22 +7,22 @@ module.exports = {
     return [
       {
         source: '/blog/core-web-vitals-understanding-lcp-fid-and-cls/',
-        destination: '/posts/core-web-vitals-understanding-lcp-fid-and-cls/',
+        destination: '/posts/core-web-vitals-understanding-lcp-fid-and-cls',
         permanent: true,
       },
       {
         source: '/blog/maximizing-conversions-from-low-traffic-landing-pages/',
-        destination: '/posts/',
+        destination: '/posts',
         permanent: true,
       },
       {
         source: '/blog/signs-of-an-unethical-seo-agency-or-freelancer/',
-        destination: '/posts/',
+        destination: '/posts',
         permanent: true,
       },
       {
         source: '/blog/how-important-is-technical-seo/',
-        destination: '/posts/',
+        destination: '/posts',
         permanent: true,
       },
     ];
