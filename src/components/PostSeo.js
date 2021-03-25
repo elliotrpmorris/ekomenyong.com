@@ -6,9 +6,9 @@ const PostSeo = ({ frontMatter }) => {
       <NextSeo
         title={frontMatter.title}
         description={frontMatter.summary}
-        canonical={`https://ekomenyong.com/posts/${frontMatter.slug}/`}
+        canonical={`https://ekomenyong.com/posts/${frontMatter.slug}`}
         openGraph={{
-          url: `https://ekomenyong.com/posts/${frontMatter.slug}/`,
+          url: `https://ekomenyong.com/posts/${frontMatter.slug}`,
           title: `${frontMatter.title}`,
           description: `${frontMatter.summary}`,
           images: [
@@ -27,7 +27,7 @@ const PostSeo = ({ frontMatter }) => {
         }}
       />
       <ArticleJsonLd
-        url={`https://ekomenyong.com/posts/${frontMatter.slug}/`}
+        url={`https://ekomenyong.com/posts/${frontMatter.slug}`}
         title={frontMatter.title}
         images={[`https://ekomenyong.com${frontMatter.image}`]}
         datePublished={`${frontMatter.publishedAt}`}
